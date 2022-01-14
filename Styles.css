@@ -1,0 +1,69 @@
+
+.text{
+    text-align: center;
+}
+
+html {
+    min-height: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(#b5e48c, #457b9d);
+}
+.Buttons{
+    text-align: center;
+}
+
+
+.Rock {
+    margin-right: 80px;
+    color: transparent;
+    display: inline-block;
+    border:0;
+    width: 295px;
+    height: 250px;
+    background:url('https://pngimg.com/uploads/stone/stone_PNG13592.png');
+    background-size: contain;
+    
+  }
+.Rock:hover {
+    opacity: 0.2;
+}
+  
+.Paper {
+    margin-right: 80px;
+    color: transparent;
+    display: inline-block;
+    border:0;
+    width: 170px;
+    height: 230px;
+    background:url('images/old-paper_4.png');
+    background-size: contain;
+    
+  }
+.Paper:hover {
+    opacity: 0.2;
+}
+
+.Scissors {
+    color: transparent;
+    display: inline-block;
+    border:0;
+    width: 275px;
+    height:250px;
+    background:url('images/pinpng.com-gold-scissors-png-3950804.png');
+    background-size: contain;
+    
+  }
+.Scissors:hover {
+    opacity: 0.2;
+}
+  
