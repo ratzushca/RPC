@@ -1,40 +1,40 @@
 
 
 
-var Rock = document.querySelector('.Rock')
-var Paper = document.querySelector('.Paper')
-var Scissors = document.querySelector('.Scissors')
+const Rock = document.querySelector('.Rock')
+const Paper = document.querySelector('.Paper')
+const Scissors = document.querySelector('.Scissors')
 
 
-var You = document.querySelector('#You')
-var Computer = document.querySelector('#Computer')
-var Game_Result = document.querySelector('#Game_Result')
-var user_Win = document.getElementById('#user_Win')
-var computer_Win = document.getElementById('#computer_Win')
+const You = document.querySelector('#You')
+const Computer = document.querySelector('#Computer')
+const Game_Result = document.querySelector('#Game_Result')
+const computer_Win = document.getElementById('computer_Win')
+const userWin = document.getElementById('user_Win')
+const userLose = document.getElementById('user_Lose')
+const userTies = document.getElementById('total_Ties')
 
-var record=[];
+let wins = 0;
+let lose = 0;
+let tie = 0;
 
+Rock.addEventListener('click', () => {
+ifPickRock(computerChoice());
+});
 
+Paper.addEventListener('click', () => {
+ifPickPaper(computerChoice());
+});
 
-
-
-    Rock.addEventListener('click', () => {
-    if_pick_rock(computerChoice());
-    });
-
-    Paper.addEventListener('click', () => {
-    if_pick_paper(computerChoice());
-    });
-
-    Scissors.addEventListener('click', () => {
-    if_pick_scissors(computerChoice());
-    });
+Scissors.addEventListener('click', () => {
+ifPickScissors(computerChoice());
+});
 
     
-    var computerChoice = () => {
-    var options = ['Rock','Paper','Scissors'];
-    var randomChoice = Math.floor(Math.random() * 3);
-    var computerChoice = options[randomChoice];
+const computerChoice = () => {
+    const options = ['Rock','Paper','Scissors'];
+    const randomChoice = Math.floor(Math.random() * 3);
+    const computerChoice = options[randomChoice];
     return computerChoice;
 
     };
@@ -45,63 +45,72 @@ var record=[];
 
 
 
-function if_pick_rock(computerChoice) {
+function ifPickRock(computerChoice) {
     You.textContent = 'You picked: Rock';
     Computer.textContent = `Computer picked: ${computerChoice}`;
     switch (computerChoice) {
         case 'Scissors':
             Game_Result.textContent = 'You won!';
-            record.push("Win");
+            wins++;
+            userWin.textContent = `# of Wins: ${wins}`;
             break;
         case 'Paper':
             Game_Result.textContent = 'You lose!';
-            record.push("Lose");
+            lose++;
+            userLose.textContent = `# of Loses: ${lose}`;
             break;
         default:
             Game_Result.textContent = 'Its a tie!';
+            tie++;
+            userTies.textContent = `# of Ties: ${tie}`;
 
         }
     };
 
 
-function if_pick_paper(computerChoice) {
+function ifPickPaper(computerChoice) {
     You.textContent = 'You picked: Paper';
     Computer.textContent = `Computer picked: ${computerChoice}`;
     switch (computerChoice) {
         case 'Rock':
             Game_Result.textContent = 'You won!';
-            record.push("Win");
+            wins++;
+            userWin.textContent = `# of Wins: ${wins}`;
             break;
         case 'Scissors':
             Game_Result.textContent = 'You lose!';
-            record.push("Lose");
+            lose++;
+            userLose.textContent = `# of Loses: ${lose}`;
             break;
         default:
             Game_Result.textContent = 'Its a tie!';
+            tie++;
+            userTies.textContent = `# of Ties: ${tie}`;
         }
     };
 
-function if_pick_scissors(computerChoice) {
+function ifPickScissors(computerChoice) {
     You.textContent = 'You picked: Scissors!';
     Computer.textContent = `Computer picked: ${computerChoice}`;
     switch (computerChoice) {
         case 'Rock':
-            Game_Result.textContent = 'You lose!';
-            record.push("Lose");
-            
+            Game_Result.textContent = 'You lose!'; 
+            lose++;
+            userLose.textContent = `# of Loses: ${lose}`;       
             break;
         case 'Paper':
             Game_Result.textContent = 'You won!';
-            record.push("Win");
-        
+            wins++;
+            userWin.textContent = `# of Wins: ${wins}`;
             break;
         default:
             Game_Result.textContent = 'Its a tie!';
+            tie++;
+            userTies.textContent = `# of Ties: ${tie}`;
         }
    
     };
 
-document.getElementById("user_Win").innerHTML = "You lost " + record.filter(x => x=="Lose").length + " times.</p><p>You won " + record.filter(x => x=="Win").length + " times.";
 
 
 

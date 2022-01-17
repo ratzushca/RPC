@@ -13,6 +13,8 @@ h2{
 
 h3{
     text-align: center;
+    color: yellowgreen;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 body {
