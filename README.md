@@ -18,4 +18,5 @@ Author
 
 Elena Springs - Jr. Software Developer :
 
-LinkedIn: https://www.linkedin.com/in/elena-springs-9b8740191/ Website: https://ratzushca.github.io/Personal_Website/Andy_course/Index.html
+LinkedIn: https://www.linkedin.com/in/elena-springs-9b8740191/ 
+Website: https://ratzushca.github.io/Personal_Website/Andy_course/Index.html
